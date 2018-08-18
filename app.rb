@@ -21,7 +21,6 @@ class App < Sinatra::Base
 
   get '/set' do
     session[:foo] = 'hello'
-      binding.pry
     if session[:foo] == 'hello'
       redirect '/fetch'
     else
