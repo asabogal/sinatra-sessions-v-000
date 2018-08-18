@@ -52,7 +52,6 @@ class App < Sinatra::Base
 
   get '/logout' do
     session = {}
-      binding.pry
     "Session has now been cleared. session content: #{session.inspect}. Continue on to the '/finish' line!"
   end
 
