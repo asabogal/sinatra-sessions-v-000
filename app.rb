@@ -21,6 +21,7 @@ class App < Sinatra::Base
 
   get '/set' do
     session[:foo] = 'hello'
+      binding.pry
     if session[:foo] == 'hello'
       redirect '/fetch'
     else
@@ -52,7 +53,6 @@ class App < Sinatra::Base
   end
 
   get '/logout' do
-    binding.pry
     #clear session hash here
     "Session has now been cleared. session content: #{session.inspect}. Continue on to the '/finish' line!"
   end
